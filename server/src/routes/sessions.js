@@ -18,9 +18,9 @@ router.post('/', async (req, res, next) => {
     const scenario = await store.getScenario(req.body.scenarioId);
     if (!scenario) return res.status(404).json({ message: 'Scenario not found' });
 
-    const abstractionMap = engine.mapReasoning(req.body.reasoning);
+    const abstractionMap = engine.mapReasoning(scenario, req.body.reasoning);
     const generatedCode = engine.generateCode(scenario, abstractionMap);
-    const prompt = engine.evaluatePrompt(req.body.promptText);
+    const prompt = engine.evaluatePrompt(scenario, req.body.promptText);
     const session = await store.addSession({
       learnerName: req.body.learnerName || 'Guest learner',
       scenario: scenario._id,
@@ -32,7 +32,7 @@ router.post('/', async (req, res, next) => {
       promptScore: prompt.score,
       promptFeedback: prompt.feedback,
       reflection: req.body.reflection || '',
-      misconceptions: engine.detectMisconceptions(req.body.reasoning),
+      misconceptions: engine.detectMisconceptions(scenario, req.body.reasoning),
       masterySignals: engine.masterySignals(abstractionMap, prompt.score)
     });
     res.status(201).json(session);
