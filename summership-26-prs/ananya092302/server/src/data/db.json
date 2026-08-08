@@ -596,5 +596,134 @@
       "updatedAt": "2026-06-19T11:54:44.733Z"
     }
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "_id": "b3e4ae1c-13c0-441b-bb9f-555948716f6f",
+      "learnerName": "Guest learner",
+      "scenario": "8cf644f0-1402-4763-9542-02bd2ca0d1dc",
+      "reasoning": "a float variable .",
+      "promptText": "float x = 5.18",
+      "abstractionMap": [
+        {
+          "pattern": "Sequential thinking",
+          "pythonConcept": "statements and variables",
+          "explanation": "You described a step-by-step solution. Python starts by representing those steps as statements."
+        }
+      ],
+      "generatedCode": "scenario = \"Bag Weight Label\"\nreasoning = \"Break the situation into clear steps\"\nprint(scenario)\nprint(reasoning)",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Sequential thinking becomes statements and variables.",
+      "promptScore": 35,
+      "promptFeedback": [
+        "Add more context about the situation and expected output.",
+        "Ask the AI to explain its reasoning, not just produce code.",
+        "Include an example input or output to make the prompt testable.",
+        "Name the Python concept you think may apply."
+      ],
+      "reflection": "i'm  good in c and python",
+      "misconceptions": [
+        "Reasoning is brief. Try naming the inputs, decision rule, and expected result."
+      ],
+      "masterySignals": [
+        "Recognized sequential thinking"
+      ],
+      "createdAt": "2026-07-31T14:15:29.260Z",
+      "updatedAt": "2026-07-31T14:15:29.260Z"
+    },
+    {
+      "_id": "c624af90-3a46-4baa-ba8b-0b99fc53fd26",
+      "learnerName": "Guest learner",
+      "scenario": "8cf644f0-1402-4763-9542-02bd2ca0d1dc",
+      "reasoning": "i will need to store a decimal or float type of value for weights in a variable .",
+      "promptText": "i will make a variable named x and assign it a value of school bag weight. eg: float x = 10.05 kg",
+      "abstractionMap": [
+        {
+          "pattern": "Collection handling",
+          "pythonConcept": "lists",
+          "explanation": "You grouped multiple values, so Python lists help store and process them. (Note: This might be over-engineering for this specific scenario)",
+          "confidence": "60% confidence"
+        },
+        {
+          "pattern": "Data mapping",
+          "pythonConcept": "dictionaries",
+          "explanation": "You are associating pieces of data together, which maps perfectly to a Python dictionary. (Note: This might be over-engineering for this specific scenario)",
+          "confidence": "60% confidence"
+        }
+      ],
+      "generatedCode": "# Scenario: Bag Weight Label\n\nitems = [target_value, \"other_data\", \"more_data\"]\ndata_map = {\"key1\": target_value, \"key2\": \"other_data\"}\n",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Collection handling becomes lists; Data mapping becomes dictionaries.",
+      "promptScore": 79,
+      "promptFeedback": [
+        "Ask the AI to explain its reasoning, not just produce code."
+      ],
+      "reflection": "i think i understand the flow of the problem ",
+      "misconceptions": [
+        "Try to store values in names (variables) instead of hardcoding numbers directly."
+      ],
+      "masterySignals": [
+        "Recognized collection handling",
+        "Recognized data mapping",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-08-02T10:01:55.517Z",
+      "updatedAt": "2026-08-02T10:01:55.517Z"
+    },
+    {
+      "_id": "df3eab14-f99a-4d81-9515-98c15cc553c8",
+      "learnerName": "Guest learner",
+      "scenario": "8cf644f0-1402-4763-9542-02bd2ca0d1dc",
+      "reasoning": "i will store a decimal(float) point number for the weight and store the value in a variable.",
+      "promptText": "i will first declare a variable and then assign it the float value of the weight. eg float x = 10.5 kg.",
+      "abstractionMap": [
+        {
+          "pattern": "Data storage",
+          "pythonConcept": "variables",
+          "explanation": "You identified data that needs to be kept in memory, which maps to declaring variables.",
+          "confidence": "90% confidence"
+        }
+      ],
+      "generatedCode": "# Scenario: Bag Weight Label\n\ntarget_value = \"sample_data\"\nprint(f\"Processed {target_value}\")\n",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Data storage becomes variables.",
+      "promptScore": 80,
+      "promptFeedback": [
+        "Ask the AI to explain its reasoning, not just produce code."
+      ],
+      "reflection": "i just know things",
+      "misconceptions": [],
+      "masterySignals": [
+        "Recognized data storage",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-08-02T10:11:29.243Z",
+      "updatedAt": "2026-08-02T10:11:29.243Z"
+    },
+    {
+      "_id": "d39ca5cd-e2ea-4d40-8c05-1eb805e6600c",
+      "learnerName": "Guest learner",
+      "scenario": "2a3496ef-bb71-4dde-83f5-37844063678d",
+      "reasoning": "for every break i will use a loop that will iterate through all the breaks once and reminds.",
+      "promptText": "i will first see how many breaks are there and then use a loop from 1st break to end break and in each break print the reminder .",
+      "abstractionMap": [
+        {
+          "pattern": "Repetition",
+          "pythonConcept": "loops",
+          "explanation": "Your reasoning repeats an action, which maps naturally to loop constructs.",
+          "confidence": "90% confidence"
+        }
+      ],
+      "generatedCode": "# Scenario: Water Bottle Reminder\n\nfor item in items:\n    # Process item\n    print(item)\n",
+      "codeExplanation": "The code starts from your natural reasoning and turns it into Python structure: Repetition becomes loops.",
+      "promptScore": 100,
+      "promptFeedback": [
+        "Strong prompt: it includes context, reasoning, examples, and the right Python direction."
+      ],
+      "reflection": "i just know it",
+      "misconceptions": [],
+      "masterySignals": [
+        "Recognized repetition",
+        "Prompt maturity is developing"
+      ],
+      "createdAt": "2026-08-02T10:13:47.165Z",
+      "updatedAt": "2026-08-02T10:13:47.165Z"
+    }
+  ]
 }

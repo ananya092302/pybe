@@ -56,6 +56,6 @@ npm run dev
 
 ## Notes
 
-The AI behavior in this prototype is deterministic and local. The abstraction mapper, prompt evaluator, and Python construct generator use rule-based logic so you can run everything without external AI keys. Later phases can replace those services with OpenAI, RAG, or TinyLLM components.
+The AI behavior in this prototype is deterministic and local. The abstraction mapper, prompt evaluator, and Python construct generator use a robust V2 rule-based logic engine with weighted keyword matching, scenario-aware evaluation, and dynamic feedback generation, allowing you to run everything locally without external AI keys. Later phases can replace those services with OpenAI, RAG, or TinyLLM components.
 
 Learning data is stored in `server/src/data/db.json`. This keeps the prototype simple and fully local, without MongoDB, Docker, Atlas, or any external database.
